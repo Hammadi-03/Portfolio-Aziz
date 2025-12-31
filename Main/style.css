@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&display=swap');
+
+.content h3 {
+    margin-bottom: 32px;
+}
+::selection {
+    background: rgb(0, 156, 128);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+.h1-muted {
+    color: #b3b3b3;
+    font-weight: 400;
+    display: block;
+    margin-top: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    scroll-behavior: smooth;
+    height: 500%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 10;
+}
+
+button {
+    background-color: #055dff;
+    color: #ffffff;
+    margin-left: 8.5% !important;
+    border: none;
+    padding: 19px 32px;
+    font-size: 19px;
+    border-radius: 35px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.3s ease;
+
+}
+
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.content {
+    margin-top: 100px;
+    padding: 40px 80px;
+    font-size: 20px;
+}
+
+.content h2 {
+    font-size: 58px;
+    transform: translateX(1.9px);
+    font-weight:400;
+    color: #000000;
+    padding:10px 60px ;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 24px;
+    }
+
+    nav ul {
+        gap: 24px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 24px;
+    }
+}
