@@ -87,7 +87,7 @@ nav {
     /* Ensure stacking context for shadow */
     overflow: visible;
     margin-left: auto;
-    margin-right: 73%;
+    margin-right: 75%;
     display: block;
 }
 
