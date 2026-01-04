@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Background -->
-    <svg style="position: absolute; width: 100%; height: 500%; z-index: 0; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <svg style="position: fixed; width: 100vw; height: 100vh; z-index: -1; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
           <circle cx="2" cy="2" r="1" fill="rgba(0,0,0,0.15)" />
@@ -28,7 +28,7 @@
         <header class="main-header">
           <div class="container">
             <nav>
-              <h1 class="logo">Abdulaziz .</h1>
+              <h1 class="logo">Abdulaziz . co</h1>
               <ul>
                 <li><a href="#home">Work</a></li>
                 <li><a href="#about">About</a></li>
@@ -48,19 +48,14 @@
         </header>
 
         <div class="button-wrap">
-  <button>
-    <span>Get in Touch</span>
-        </button>
+  <a href="#footer" style="text-decoration: none;">
+    <button>
+      <span>Get in Touch</span>
+    </button>
+  </a>
+
   <div class="button-shadow"></div>
 </div>
-
-        
-
- 
-
-
-
-
       </div>
     </div>
 
@@ -68,7 +63,6 @@
 
 
 
-    
 
 
 
@@ -76,16 +70,53 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="custom-footer" id="footer">
+      <div class="footer-email">
+        <p>Contact</p>
+        <h2>Ready to build <br> something great?</h2>
+        <a href="mailto:make.it161@gmail.com" class="email-button">
+          <button>
+            <span>
+              Say Hello
+            </span>
+          </button>
+        </a>
+
+      </div>
+      <div class="footer-left">
+        ©2026 Portfolio designed with passion by Abdulaziz.
+      </div>
+      <div class="footer-right">
+        <a href="abdulazizhammadi809@gmail.com" target="_blank">Email</a>
+        <a href="https://www.instagram.com/09azizprofile?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/elhammadi/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
 
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
 <script>
   AOS.init();
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="Main/js/gsap.min.js"></script>
 <script type="module" src="Main/js/main.js"></script>
