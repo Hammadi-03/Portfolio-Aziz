@@ -54,9 +54,9 @@ document.addEventListener('selectionchange', () => {
 });
 
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { gsap } from "https://esm.sh/gsap";
+import { ScrollTrigger } from "https://esm.sh/gsap/ScrollTrigger";
+import { ScrollSmoother } from "https://esm.sh/gsap/ScrollSmoother";
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -77,8 +77,8 @@ ScrollSmoother.create({
   smoothTouch: 0.05 // even softer smoothing on touch devices
 });
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "https://esm.sh/react";
+import { motion } from "https://esm.sh/framer-motion";
 
 const portfolioItems = [
   {
