@@ -1,9 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&display=swap');
+
+a.pill-button {
+  /* Essential Layout */
+  display: inline-block;
+  padding: 1.1px;
+  background: rgb(237, 237, 237) !important;
+  color: #222 !important;
+  border-radius: 99vw !important;
+  text-decoration: none !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+.pill-button:hover {
+  background: #f3f3f3;
+  color: #111;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;                 
+  justify-content: center;   
+  padding: 20px;
+}
+
 .email-button,
 .email-button button,
 .email-button button span {
-  text-decoration: none !important;
+text-decoration: none !important;
 }
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&display=swap');
 .email-button button {
   background: rgb(237, 237, 237) !important;
   color: #222 !important;
