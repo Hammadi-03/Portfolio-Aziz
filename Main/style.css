@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&display=swap');
 
 a.pill-button {
-  /* Essential Layout */
   display: inline-block;
   padding: 1.1px;
   background: rgb(237, 237, 237) !important;
@@ -42,7 +41,22 @@ text-decoration: none !important;
   background: #f3f3f3;
   color: #111;
 }
+.footer-email h2 {
+    font-size: 3.9rem;      
+    font-weight: 200;
+    line-height: 1.1;
+    color: #fff;            
+    margin: 0; 
 
+}            
+
+.footer-email p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 8px;
+  font-weight: 300;
+  margin-bottom: 55%;
+}
 .footer-text-btn {
   background: none;
   border: none;
