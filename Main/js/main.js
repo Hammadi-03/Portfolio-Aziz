@@ -302,3 +302,26 @@ export default function PortfolioSection() {
     </div>
   );
 }
+
+const hoverSound = new Audio('click-sound.mp3');
+
+document.querySelector('.my-button').addEventListener('mouseenter', () => {
+  hoverSound.play();
+});
+
+
+function toggleMusic() {
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicBtn');
+  const icon = document.getElementById('musicIcon');
+
+  if (audio.paused) {
+    audio.play();
+    btn.classList.add('playing');
+    icon.innerHTML = '🔊'; // Speaker On
+  } else {
+    audio.pause();
+    btn.classList.remove('playing');
+    icon.innerHTML = '🔇'; // Speaker Off
+  }
+}

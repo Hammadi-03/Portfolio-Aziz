@@ -13,6 +13,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <audio id="bgMusic" loop autoplay muted>
+  <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMute()">🔊 Unmute Music</button>
+
+<script>
+  function toggleMute() {
+    const audio = document.getElementById('bgMusic');
+    audio.muted = !audio.muted;
+  }
+</script>
+  <audio id="bgMusic" loop>
+  <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" class="music-fab" onclick="toggleMusic()">
+  <span id="musicIcon">🔇</span>
+</button>
+
+<button onclick="toggleMute()">🔊 Unmute Music</button>
+
+<script>
+  function toggleMute() {
+    const audio = document.getElementById('bgMusic');
+    audio.muted = !audio.muted;
+  }
+</script>
     <!-- Background -->
     <svg style="position: fixed; width: 100vw; height: 100vh; z-index: -1; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -59,7 +86,7 @@
     </div>
 
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-labelledby="t">
-	<image href="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+	<image href="picofme.png" 
          width="200" height="200"
          preserveAspectRatio="xMidYMid slice"
          clip-path="url(#blobClip)"/>
@@ -103,7 +130,7 @@
 
 
 
-<section class="about-section">
+<section class="about-section" id="about">
   <div class="about-container">
     <span class="about-label">about</span>
 
