@@ -13,33 +13,129 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <audio id="bgMusic" loop autoplay muted>
+  <div id="overlay">
+  <button onclick="startExperience()" class="enter-btn">ENTER SITE</button>
+</div>
+
+<audio id="bgMusic" loop>
   <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="toggleMute()">🔊 Unmute Music</button>
-
-<script>
-  function toggleMute() {
-    const audio = document.getElementById('bgMusic');
-    audio.muted = !audio.muted;
+<button id="musicBtn" class="music-fab" onclick="toggleMusic()">
+  <span id="musicIcon">🔊</span>
+</button>
+  <style>
+  .music-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    z-index: 9999;
   }
-</script>
-  <audio id="bgMusic" loop>
+
+  .music-fab:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .music-fab.playing {
+    animation: pulse 2s infinite;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  }
+  #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Change to your brand color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.8s ease;
+}
+
+.enter-btn {
+  padding: 15px 40px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  background: white;
+  color: black;
+}
+</style>
+
+<audio id="bgMusic" loop>
   <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
 </audio>
+
 <button id="musicBtn" class="music-fab" onclick="toggleMusic()">
   <span id="musicIcon">🔇</span>
 </button>
 
-<button onclick="toggleMute()">🔊 Unmute Music</button>
-
 <script>
-  function toggleMute() {
-    const audio = document.getElementById('bgMusic');
-    audio.muted = !audio.muted;
+  function startExperience() {
+  const audio = document.getElementById('bgMusic');
+  const overlay = document.getElementById('overlay');
+  const btn = document.getElementById('musicBtn');
+
+  // 1. Play the audio (The browser allows this because of the click)
+  audio.play();
+  
+  // 2. Hide the overlay
+  overlay.style.opacity = '0';
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 800);
+
+  // 3. Make sure the FAB button shows it's playing
+  btn.classList.add('playing');
+}
+
+// Keep your toggleMusic function for the FAB button
+function toggleMusic() {
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicBtn');
+  const icon = document.getElementById('musicIcon');
+
+  if (audio.paused) {
+    audio.play();
+    btn.classList.add('playing');
+    icon.innerHTML = '🔊';
+  } else {
+    audio.pause();
+    btn.classList.remove('playing');
+    icon.innerHTML = '🔇';
   }
+}
 </script>
+
     <!-- Background -->
     <svg style="position: fixed; width: 100vw; height: 100vh; z-index: -1; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -146,6 +242,14 @@
     </div>
   </div>
 </section>
+<section id="about">
+
+  <div class="qqq-text-wrapper">
+    <h2 class="reveal-text">WHO I AM<span>A CREATIVE DEVELOPER</span></h2>
+    <h2 class="reveal-text">WHAT I DO<span>UI/UX & ANIMATION</span></h2>
+    <h2 class="reveal-text">MY MISSION<span>CRAFTING EXPERIENCES</span></h2>
+  </div>
+</section>
 
     <footer class="custom-footer" id="footer">
   <div class="footer-content-wrapper">
@@ -157,6 +261,7 @@
         <a href="Profile.pdf" download class="pill-button">Grab My Resume </a>
       </div>
     </div>
+    
     
     <div class="footer-right">
       <a href="mailto:abdulazizhammadi809@gmail.com" target="_blank">Email</a>

@@ -310,18 +310,19 @@ document.querySelector('.my-button').addEventListener('mouseenter', () => {
 });
 
 
-function toggleMusic() {
-  const audio = document.getElementById('bgMusic');
-  const btn = document.getElementById('musicBtn');
-  const icon = document.getElementById('musicIcon');
+gsap.registerPlugin(ScrollTrigger);
 
-  if (audio.paused) {
-    audio.play();
-    btn.classList.add('playing');
-    icon.innerHTML = '🔊'; // Speaker On
-  } else {
-    audio.pause();
-    btn.classList.remove('playing');
-    icon.innerHTML = '🔇'; // Speaker Off
-  }
-}
+const aboutTexts = gsap.utils.toArray('.reveal-text');
+
+aboutTexts.forEach(text => {
+  gsap.to(text, {
+    backgroundSize: '100%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: text,
+      start: 'top 90%', // Starts filling when the line is near the bottom
+      end: 'top 30%',   // Finishes filling near the top
+      scrub: true,
+    },
+  });
+});
