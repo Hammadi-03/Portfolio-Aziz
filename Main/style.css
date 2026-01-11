@@ -339,17 +339,6 @@ button:active::after {
   text-align: right;
 }
 
-/* ================= SVG SECTION ================= */
-.blob-section {
-  display: flex;
-  justify-content: centre;
-  padding: 100px 0;
-}
-
-.blob-section svg {
-  max-width: 70vw;
-  height: auto;
-}
 
 /* ================= FOOTER ================= */
 .custom-footer {
@@ -569,4 +558,87 @@ button:active::after {
 
 .reveal-text:hover > span {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Grid Container */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 40px; /* Space between projects */
+  padding: 40px;
+}
+
+/* Individual Card */
+.project-card {
+  text-decoration: none; /* Remove link underline */
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover
+/* Image Container with Soft Corners */
+.image-container {
+  background-color: #E9ECEF; /* Light gray base */
+  border-radius: 32px; /* High radius as seen in image */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category {
+  font-size: 14px;
+  color: #6C757D; 
+  font-weight: 500;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 4px 0 0 0;
+  color: #212529;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
+.image-container {
+  background-color: #E9ECEF;
+  border-radius: 32px; 
+  aspect-ratio: 16 / 9;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth "out" transition */
+}
+
+/* 3. Scale only the image when the parent card is hovered */
+.project-card:hover .image-container img {
+  transform: scale(1.1); /* Increases size by 10% */
+}
+
+/* Optional: Subtle darkening effect on hover */
+.project-card:hover .image-container {
+  background-color: #e2e5e9;
 }
