@@ -108,13 +108,11 @@
   // 1. Play the audio (The browser allows this because of the click)
   audio.play();
   
-  // 2. Hide the overlay
   overlay.style.opacity = '0';
   setTimeout(() => {
     overlay.style.display = 'none';
   }, 800);
 
-  // 3. Make sure the FAB button shows it's playing
   btn.classList.add('playing');
 }
 
@@ -153,7 +151,7 @@ function toggleMusic() {
             <nav>
               <h1 class="logo">Abdulaziz Hammadi</h1>
               <ul>
-                <li><a href="#home">Work</a></li>
+                <li><a href="#project">Work</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#footer">Contact</a></li>
               </ul>
@@ -182,7 +180,7 @@ function toggleMusic() {
     </div>
 
     <section class="work-grid">
-  <a href="rupio-detail.html" class="project-card">
+  <a href="rupio-detail.html" class="project-card" id="project">
     <div class="image-container">
       <img src="Main/asset/img/hqdefault (1).avif" alt="Rupio UI Design">
     </div>
