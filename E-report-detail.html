@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziz Portfolio</title>
+    <link rel="icon" type="image/png" href="Main/asset/Vector.svg">
+    <link rel="stylesheet" href="Main/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+<audio id="bgMusic" loop>
+  <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-fab" onclick="toggleMusic()">
+  <span id="musicIcon">🔊</span>
+</button>
+  <style>
+  .music-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+
+  .music-fab:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .music-fab.playing {
+    animation: pulse 2s infinite;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  }
+  #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Change to your brand color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.8s ease;
+}
+
+.enter-btn {
+  padding: 15px 40px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  background: white;
+  color: black;
+}
+</style>
+
+<audio id="bgMusic" loop>
+  <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-fab" onclick="toggleMusic()">
+  <span id="musicIcon">🔇</span>
+</button>
+
+<script>
+  function startExperience() {
+  const audio = document.getElementById('bgMusic');
+  const overlay = document.getElementById('overlay');
+  const btn = document.getElementById('musicBtn');
+
+  // 1. Play the audio (The browser allows this because of the click)
+  audio.play();
+  
+  overlay.style.opacity = '0';
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 800);
+
+  btn.classList.add('playing');
+}
+
+// Keep your toggleMusic function for the FAB button
+function toggleMusic() {
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicBtn');
+  const icon = document.getElementById('musicIcon');
+
+  if (audio.paused) {
+    audio.play();
+    btn.classList.add('playing');
+    icon.innerHTML = '🔊';
+  } else {
+    audio.pause();
+    btn.classList.remove('playing');
+    icon.innerHTML = '🔇';
+  }
+}
+</script>
+
+    <!-- Background -->
+    <svg style="position: fixed; width: 100vw; height: 100vh; z-index: -1; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1" fill="rgba(0,0,0,0.15)" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#dottedGrid)" />
+    </svg>
+    
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header class="main-header">
+          <div class="container">
+            <nav>
+              <h1 class="logo">Abdulaziz Hammadi</h1>
+              <ul>
+                <li><a href="index.html;">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="content">
+              <h5>Web Development  ·  Graphic Design ·  Software Engineer</h5>

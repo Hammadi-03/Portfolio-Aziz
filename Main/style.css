@@ -87,11 +87,11 @@ nav ul li a:hover {
 }
 
 .content h2 {
-  font-size: clamp(50px, 8vw, 80px);
+  font-size: clamp(40px, 8vw, 55px);
   font-weight: 400;
   line-height: 1.15;
-  color: #000;
-  max-width: 900px;
+  color: #252525;
+  max-width: 998px;
 }
 
 .h1-muted {
@@ -564,7 +564,7 @@ button:active::after {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 40px; /* Space between projects */
+  gap: 30px; /* Space between projects */
   padding: 40px;
 }
 
