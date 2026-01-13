@@ -642,3 +642,152 @@ button:active::after {
 .project-card:hover .image-container {
   background-color: #e2e5e9;
 }
+
+
+
+/* ================= RESPONSIVE POLISH ================= */
+
+/* ---------- GLOBAL FIX ---------- */
+nav {
+  align-items: center; /* fix typo */
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- LARGE TABLETS (1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .content h2 {
+    max-width: 100%;
+  }
+
+  .about-content p {
+    font-size: 18px;
+  }
+
+  .footer-buttons a {
+    padding: 22px 44px;
+    font-size: 20px;
+  }
+}
+
+/* ---------- TABLET & MOBILE (768px) ---------- */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* HERO */
+  .content {
+    padding: 90px 24px 0;
+  }
+
+  .content h2 {
+    font-size: clamp(32px, 7vw, 44px);
+    line-height: 1.2;
+  }
+
+  .button-wrap {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  button span {
+    font-size: 1.1em;
+    padding-inline: 2em;
+    padding-block: 0.75em;
+  }
+
+  /* ABOUT */
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-label {
+    font-size: 14px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+  }
+
+  /* WORK GRID */
+  .work-grid {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  /* FOOTER */
+  .custom-footer {
+    border-radius: 28px;
+    padding: 40px 24px;
+  }
+
+  .footer-content-wrapper {
+    gap: 40px;
+  }
+
+  .footer-email h2 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+  }
+
+  .footer-buttons a {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* ---------- SMALL MOBILE (480px) ---------- */
+@media (max-width: 480px) {
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav ul {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .content h5 {
+    font-size: 14px;
+  }
+
+  .content h2 {
+    font-size: 30px;
+  }
+
+  button span {
+    font-size: 1em;
+  }
+
+  .reveal-text {
+    font-size: 9vw;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .category {
+    font-size: 13px;
+  }
+}
