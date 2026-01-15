@@ -353,3 +353,26 @@ const showDemo = () => {
 }
 
 imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Register ScrollTrigger if you're using the GSAP plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate Section Headers and Metadata
+  const fadeUpElements = document.querySelectorAll(".about-section, .project-header, .project-card");
+
+  fadeUpElements.forEach((el) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%", // Starts when element is 85% from top of viewport
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power4.out",
+      stagger: 0.2
+    });
+  });
+});
