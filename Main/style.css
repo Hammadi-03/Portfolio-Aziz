@@ -760,7 +760,7 @@ body {
   width: 100%;
 }
 
-.card {
+/* .card {
   background-color: #e2e4e9; 
   border-radius: 32px; 
   overflow: hidden; 
@@ -786,8 +786,109 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+} */
+
+
+/* General Layout */
+
+
+.project-showcase {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Header Meta-Data (The row at the top) */
+.project-header {
+  display: flex;
+  gap: 103px; /* Space between Project Type and Title */
+  margin-bottom: 55px;
+}
+
+.label {
+  color: #888; /* Dimmed gray for labels */
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 95px;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+/* Bento Grid (Your existing code with minor tweaks) */
+.bento-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; 
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: #e2e4e9; 
+  border-radius: 32px; 
+  overflow: hidden; 
+}
+
+.card-large { grid-column: span 2; height: 450px; }
+.card-medium, .card-small { height: 350px; }
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer Description */
+.project-footer {
+  max-width: 700px; /* Limits width of text for readability like the image */
+}
+
+.description {
+  color: #000000;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff; /* Blue button */
+  color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: black;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
 /* ---------- LARGE TABLETS (1024px) ---------- */
 @media (max-width: 1024px) {
 
@@ -923,12 +1024,5 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .bento-container {
-    grid-template-columns: 1fr; 
-  }
-  .card-large {
-    grid-column: span 1;
-  }
-}
+
 
