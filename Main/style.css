@@ -54,11 +54,25 @@ nav {
 
 .logo {
   font-size: 35px;
+  text-decoration: none !important;
   font-family: Array-Regular, sans-serif;
   font-weight: 400;
   color: #000;
 }
 
+.logo a {
+  text-decoration: none; /* Removes the underline */
+  color: #000;           /* Sets text to black instead of blue */
+}
+
+.logo a:visited {
+  color: #000;
+}
+
+.logo a:hover {
+  opacity: 0.7; /* Gives a subtle fade when hovered */
+  transition: 0.3s; /* Makes the fade smooth */
+}
 nav ul {
   list-style: none;
   display: flex;
@@ -729,12 +743,49 @@ footer {height: 50vh}
 
 /* ---------- GLOBAL FIX ---------- */
 nav {
-  align-items: center; /* fix typo */
+  align-items: center; 
 }
 
-/* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
+}
+
+.bento-container {
+  display: grid;
+  /* 2 columns, but the top card will span both */
+  grid-template-columns: 1.2fr 1fr; 
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.card {
+  background-color: #e2e4e9; 
+  border-radius: 32px; 
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-large {
+  grid-column: span 2;
+  height: 400px;
+}
+
+.card-medium {
+  height: 300px;
+}
+
+.card-small {
+  height: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ---------- LARGE TABLETS (1024px) ---------- */
@@ -871,3 +922,13 @@ body {
     font-size: 13px;
   }
 }
+
+@media (max-width: 768px) {
+  .bento-container {
+    grid-template-columns: 1fr; 
+  }
+  .card-large {
+    grid-column: span 1;
+  }
+}
+

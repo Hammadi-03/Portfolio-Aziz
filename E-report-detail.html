@@ -9,128 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="fonts/array.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-<audio id="bgMusic" loop>
-  <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
-</audio>
-
-<button id="musicBtn" class="music-fab" onclick="toggleMusic()">
-  <span id="musicIcon">🔊</span>
-</button>
-  <style>
-  .music-fab {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    transition: all 0.3s ease;
-    z-index: 9999;
-  }
-
-  .music-fab:hover {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  .music-fab.playing {
-    animation: pulse 2s infinite;
-    background: rgba(255, 255, 255, 0.4);
-  }
-
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-  }
-  #overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000; /* Change to your brand color */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  transition: opacity 0.8s ease;
-}
-
-.enter-btn {
-  padding: 15px 40px;
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  letter-spacing: 2px;
-  transition: 0.3s;
-}
-
-.enter-btn:hover {
-  background: white;
-  color: black;
-}
-</style>
-
-<audio id="bgMusic" loop>
-  <source src="SpotiDownloader.com - PORTAL - YAD Oud.mp3" type="audio/mpeg">
-</audio>
-
-<button id="musicBtn" class="music-fab" onclick="toggleMusic()">
-  <span id="musicIcon">🔇</span>
-</button>
-
-<script>
-  function startExperience() {
-  const audio = document.getElementById('bgMusic');
-  const overlay = document.getElementById('overlay');
-  const btn = document.getElementById('musicBtn');
-
-  // 1. Play the audio (The browser allows this because of the click)
-  audio.play();
-  
-  overlay.style.opacity = '0';
-  setTimeout(() => {
-    overlay.style.display = 'none';
-  }, 800);
-
-  btn.classList.add('playing');
-}
-
-// Keep your toggleMusic function for the FAB button
-function toggleMusic() {
-  const audio = document.getElementById('bgMusic');
-  const btn = document.getElementById('musicBtn');
-  const icon = document.getElementById('musicIcon');
-
-  if (audio.paused) {
-    audio.play();
-    btn.classList.add('playing');
-    icon.innerHTML = '🔊';
-  } else {
-    audio.pause();
-    btn.classList.remove('playing');
-    icon.innerHTML = '🔇';
-  }
-}
-</script>
-
-    <!-- Background -->
-    <svg style="position: fixed; width: 100vw; height: 100vh; z-index: -1; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <svg style="position: fixed; width: 100vw; height: 100vh; z-index: -1; top: 0; left: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
           <circle cx="2" cy="2" r="1" fill="rgba(0,0,0,0.15)" />
@@ -144,17 +27,37 @@ function toggleMusic() {
         <header class="main-header">
           <div class="container">
             <nav>
-              <h1 class="logo">Abdulaziz Hammadi</h1>
+              <h1 class="logo"><a href="index.html">hi, i'm Abdulaziz</a></h1>
               <ul>
                 <li><a href="#project">Work</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#footer">Contact</a></li>
               </ul>
             </nav>
-            <div class="content">
-              <h5>Web Development  ·  Graphic Design ·  Software Engineer</h5>
-<div class="framer-1nfh6mt" style="will-change: transform; opacity: 1; transform: perspective(1600px);"><div class="framer-17tfs8g" data-framer-name="Description"><div class="framer-53kbci" data-framer-name="Client Name" data-framer-component-type="RichTextContainer" style="transform:none">
-    <p style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-weight:500;--framer-line-height:1.9em;--framer-text-alignment:left;--framer-text-color:var(--token-0e272a57-d630-4ae6-a209-51c62dec2a5a, rgb(135, 135, 135))" class="framer-text">Project Type</p></div><div class="framer-14xfzq5" data-framer-component-type="RichTextContainer" style="transform:none"><h4 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:18px;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">Web development</h4></div></div><div class="framer-10bwbk6" data-framer-name="Description"><div class="framer-1w046mc" data-framer-name="Client Name" data-framer-component-type="RichTextContainer" style="transform:none"><p style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-0e272a57-d630-4ae6-a209-51c62dec2a5a, rgb(135, 135, 135))" class="framer-text">Title</p></div><div class="framer-10mge0i" data-framer-component-type="RichTextContainer" style="transform:none"><h4 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:18px;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">E-report</h4></div></div></div>
-    <h1 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:64px;--framer-font-weight:500;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">Rupio Mobile Platform. Future Financial Education</h1>
 
-    <div class="framer-o7pt38"><div class="framer-xnpqmo" data-framer-name="Header"><div class="framer-1o6ijvg"><div class="framer-1nfh6mt" style="will-change: transform; opacity: 1; transform: perspective(1200px);"><div class="framer-17tfs8g" data-framer-name="Description"><div class="framer-53kbci" data-framer-name="Client Name" data-framer-component-type="RichTextContainer" style="transform:none"><p style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-0e272a57-d630-4ae6-a209-51c62dec2a5a, rgb(135, 135, 135))" class="framer-text">Project Type</p></div><div class="framer-14xfzq5" data-framer-component-type="RichTextContainer" style="transform:none"><h4 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:18px;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">UI/UX Design</h4></div></div><div class="framer-10bwbk6" data-framer-name="Description"><div class="framer-1w046mc" data-framer-name="Client Name" data-framer-component-type="RichTextContainer" style="transform:none"><p style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-0e272a57-d630-4ae6-a209-51c62dec2a5a, rgb(135, 135, 135))" class="framer-text">Title</p></div><div class="framer-10mge0i" data-framer-component-type="RichTextContainer" style="transform:none"><h4 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:18px;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">Rupio</h4></div></div></div><div class="framer-1362is6" data-framer-component-type="RichTextContainer" style="will-change: transform; opacity: 1; transform: perspective(1200px);"><h1 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:64px;--framer-font-weight:500;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">Rupio Mobile Platform. Future Financial Education</h1></div></div></div><div class="framer-1t6o724" data-framer-name="Gallery" style="will-change: transform; opacity: 1; transform: perspective(1200px);"><div class="framer-dal0zy"><div class="framer-92tkg6" data-framer-name="Image"><div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="auto" width="6240" height="3360" sizes="min(100vw - 160px, 1800px)" srcset="https://framerusercontent.com/images/DgVXA8iqQDhb3CRW3FLlwiUr0.png?scale-down-to=512&amp;width=6240&amp;height=3360 512w,https://framerusercontent.com/images/DgVXA8iqQDhb3CRW3FLlwiUr0.png?scale-down-to=1024&amp;width=6240&amp;height=3360 1024w,https://framerusercontent.com/images/DgVXA8iqQDhb3CRW3FLlwiUr0.png?scale-down-to=2048&amp;width=6240&amp;height=3360 2048w,https://framerusercontent.com/images/DgVXA8iqQDhb3CRW3FLlwiUr0.png?scale-down-to=4096&amp;width=6240&amp;height=3360 4096w,https://framerusercontent.com/images/DgVXA8iqQDhb3CRW3FLlwiUr0.png?width=6240&amp;height=3360 6240w" src="https://framerusercontent.com/images/DgVXA8iqQDhb3CRW3FLlwiUr0.png?width=6240&amp;height=3360" alt="" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover"></div></div></div><div class="framer-fb53fs"><div class="framer-1teufhb" data-framer-name="Wrap"><div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0;background-repeat:repeat;background-position:left top;background-size:64px auto;background-image:url('data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;126&quot; height=&quot;126&quot;&gt;&lt;path id=&quot;a&quot; d=&quot;M126 0v21.584L21.584 126H0v-17.585L108.415 0H126Zm0 108.414V126h-17.586L126 108.414Zm0-84v39.171L63.585 126H24.414L126 24.414Zm0 42v39.17L105.584 126h-39.17L126 66.414ZM105.586 0 0 105.586V66.415L66.415 0h39.171Zm-42 0L0 63.586V24.415L24.415 0h39.171Zm-42 0L0 21.586V0h21.586Z&quot; fill=&quot;rgb(136, 136, 136, 0.2)&quot; fill-rule=&quot;evenodd&quot;/&gt;&lt;/svg&gt;')" data-framer-background-image-wrapper="true"></div><div class="framer-1aho2c8" data-framer-name="Image"><div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="auto" loading="lazy" width="3000" height="2400" sizes="max((min(100vw - 160px, 1800px) - 40px) / 2, 1px)" srcset="https://framerusercontent.com/images/58FOblHIucuxauVkWZZgfg9UxzY.png?scale-down-to=512&amp;width=3000&amp;height=2400 512w,https://framerusercontent.com/images/58FOblHIucuxauVkWZZgfg9UxzY.png?scale-down-to=1024&amp;width=3000&amp;height=2400 1024w,https://framerusercontent.com/images/58FOblHIucuxauVkWZZgfg9UxzY.png?scale-down-to=2048&amp;width=3000&amp;height=2400 2048w,https://framerusercontent.com/images/58FOblHIucuxauVkWZZgfg9UxzY.png?width=3000&amp;height=2400 3000w" src="https://framerusercontent.com/images/58FOblHIucuxauVkWZZgfg9UxzY.png?width=3000&amp;height=2400" alt="" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover"></div></div></div><div class="framer-k5t16" data-framer-name="Wrap"><div class="framer-4fkgxb" data-framer-name="Image"><div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="auto" loading="lazy" width="3000" height="2400" sizes="max((min(100vw - 160px, 1800px) - 40px) / 2, 1px)" srcset="https://framerusercontent.com/images/zNSMg4erMtmZUx8BIAr1SYoUm5Q.png?scale-down-to=512&amp;width=3000&amp;height=2400 512w,https://framerusercontent.com/images/zNSMg4erMtmZUx8BIAr1SYoUm5Q.png?scale-down-to=1024&amp;width=3000&amp;height=2400 1024w,https://framerusercontent.com/images/zNSMg4erMtmZUx8BIAr1SYoUm5Q.png?scale-down-to=2048&amp;width=3000&amp;height=2400 2048w,https://framerusercontent.com/images/zNSMg4erMtmZUx8BIAr1SYoUm5Q.png?width=3000&amp;height=2400 3000w" src="https://framerusercontent.com/images/zNSMg4erMtmZUx8BIAr1SYoUm5Q.png?width=3000&amp;height=2400" alt="" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover"></div></div></div></div></div><div class="framer-1waku4i" style="will-change: transform; opacity: 1; transform: perspective(1200px);"><div class="framer-1tg5rod" data-framer-component-type="RichTextContainer" style="transform:none"><h3 style="--font-selector:RlM7TWFucm9wZS1yZWd1bGFy;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">Rupio is a solution that offers financial literacy learning in a fun and interactive way. With rapid technological development, many young people now prefer dynamic and non-monotonous learning methods, unlike traditional lecture-style learning. In addition, the tendency of young people to spend money just to fulfill their wants is also increasing.</h3><h3 style="--font-selector:R0Y7TWFucm9wZS01MDA=;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-font-weight:500;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text"><br class="framer-text trailing-break"></h3><h3 style="--font-selector:RlM7TWFucm9wZS1yZWd1bGFy;--framer-font-family:&quot;Manrope&quot;, &quot;Manrope Placeholder&quot;, sans-serif;--framer-font-size:24px;--framer-line-height:1.4em;--framer-text-alignment:left;--framer-text-color:var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0))" class="framer-text">Seeing this situation, we present an innovative idea to help the younger generation understand money management in a more enjoyable and lifestyle-relevant way.</h3></div><div class="framer-1f6gcfy"><div class="framer-19lmfxv-container"><!--$--><a class="framer-YtqGW framer-18eyfj0 framer-v-18eyfj0 framer-15aqxtq" data-framer-appear-id="18eyfj0" data-framer-name="Variant 1" data-highlight="true" href="https://medium.com/@atta.wan29/rupio-aplikasi-edukasi-literasi-finansial-dengan-metode-simulasi-interaktif-1c1c200d426e" rel="noopener" tabindex="0" style="background-color: rgb(0, 107, 255); will-change: transform; border-radius: 999px; opacity: 1; transform: none;"><div class="framer-e0ukzv" data-framer-component-type="RichTextContainer" style="--extracted-1eung3n: var(--token-e16847f2-b192-48e1-a890-7bbcce11cc6e, rgb(255, 255, 255)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"><h4 class="framer-text" style="--font-selector:SW50ZXItTWVkaXVt;--framer-font-size:18px;--framer-font-weight:500;--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-e16847f2-b192-48e1-a890-7bbcce11cc6e, rgb(255, 255, 255)))">View Study Case</h4></div></a><!--/$--></div><div class="framer-h04e59-container"><!--$--><a class="framer-YtqGW framer-18eyfj0 framer-v-1rbfm9m framer-15aqxtq" data-framer-appear-id="18eyfj0" data-framer-name="Variant 2" data-highlight="true" href="https://www.figma.com/proto/xCK3a8E8fGbOvxtTZnNKU6/Rupio---Kadal-Mesir?page-id=1073%3A1764&amp;node-id=2757-20912&amp;viewport=353%2C141%2C0.12&amp;t=NDReNpyALAdu4qZ4-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=2757%3A20580" rel="noopener" tabindex="0" style="background-color: rgb(240, 240, 240); will-change: transform; border-radius: 999px; opacity: 1; transform: none;"><div class="framer-e0ukzv" data-framer-component-type="RichTextContainer" style="--extracted-1eung3n: var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"><h4 class="framer-text" style="--font-selector:SW50ZXItTWVkaXVt;--framer-font-size:18px;--framer-font-weight:500;--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-be079bad-eabd-4234-8a56-5579c7057187, rgb(0, 0, 0)))">See Prototype</h4></div></a><!--/$--></div></div></div></div>
+            <div class="project-text-wrapper">
+              <p>Project Type</p>
+            <h3>E-reporting system</h3>
+            <p>Title</p>
+            <h3>E-report</h3>
+            <h1>Online Reporting Platform. <br> Advance Managing system</h1>
+            </div>
+            
+            <div class="bento-container">
+  <div class="card card-large">
+    <img src="Main/asset/img/e-reportwebsite.netlify.app_dashboard (1).png" alt="App Screens">
+  </div>
+  <div class="card card-medium">
+    <img src="Main/asset/img/Frame 33856.jpg" alt="Phone in hand">
+  </div>
+  <div class="card card-small">
+    <img src="Main/asset/img/rport servises.png" alt="Characters">
+  </div>
+</div>
+
+<h3>Rupio is a solution that offers financial literacy learning in a fun and interactive way. With rapid technological development,<br> many young people now prefer dynamic and non-monotonous learning methods, unlike traditional lecture-style learning. In addition, the tendency of young people to spend money just to fulfill their wants is also increasing. <br>
+  <br>
+
+Seeing this situation, we present an innovative idea to help the younger generation understand <br> management in a more enjoyable and lifestyle-relevant way.   </h3>
+
+
