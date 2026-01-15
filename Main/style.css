@@ -35,9 +35,11 @@ body {
 }
 
 /* ================= NAVBAR ================= */
-nav {
+/* nav {
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   font-family: Array-Regular, sans-serif;
   font-weight: 400;
@@ -50,13 +52,30 @@ nav {
   align-items: centre;
 
   padding: 24px clamp(24px, 6vw, 80px);
-}
+} */
 
-.logo {
+nav {
+  position: sticky; /* Keep it at the top while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%; /* Forces full width */
+  z-index: 5000; /* Ensures it stays above other content */
+  font-family: Array-Regular, sans-serif;
   font-size: 35px;
+  font-weight: 400px;
+  background: rgba(255, 255, 255, 0.8); /* Slight transparency for glass effect */
+  backdrop-filter: blur(10px);
+  padding: 20px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 39px;
   text-decoration: none !important;
   font-family: Array-Regular, sans-serif;
-  font-weight: 400;
+  font-weight: 400px;
   color: #000;
 }
 
@@ -83,12 +102,12 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #666;
-  font-weight: 500;
+  font-weight: 400px;
   transition: color 0.25s ease;
 }
 
 nav ul li a:hover {
-  color: #037f90;
+  color: #008dc4;
 }
 
 /* ================= HERO ================= */
@@ -1080,18 +1099,35 @@ section.demo-gallery .wrapper {
 .demo-text .text {
   font-size: clamp(8rem, 15vw, 16rem);
   line-height: 1;
-  font-weight: 900;
+  font-weight: 400px;
+  font-family: Array-Regular, sans-serif;
   will-change: transform;
   font-kerning: none;
   -webkit-text-stroke: 1px rgba(255,255,255,0.1);
 }
 
+.demo-text .text:hover{
+color: rgb(1, 103, 103);
+}
+
+
 /* Horizontal Gallery Items */
 .demo-gallery li {
   flex-shrink: 0;
-  width: clamp(500px, 60vw, 800px);
-  padding-right: 1rem;
+  width: clamp(400px, 50vw, 700px);
+  padding-right: 2rem;
   list-style: none; /* Removes dots from gallery only */
+}
+
+.demo-gallery li img {
+    width: 100%;
+    /* This creates that 'Certificate' shape (Aspect Ratio of 4:3 or 3:2) */
+    height: 450px; 
+    
+    object-fit: cover;    /* Important: Crops the image to fit without stretching */
+    object-position: center; 
+    border-radius: 12px;  /* Optional: gives it a slightly polished look */
+    background: #f0f0f0;  /* Placeholder color if image fails to load */
 }
 
 div.info .h5q {
@@ -1100,4 +1136,23 @@ div.info .h5q {
   align-items: center;
   justify-content: center
   ;
+}
+
+button {
+  outline: none !important; /* Removes the focus square */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* If the 'square' is the border-glow from the code you pasted: */
+button::after {
+  display: none; /* This removes the extra decorative layer causing the square */
+}
+
+/* Keep the glass look clean */
+button span {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px; /* Ensures it stays a pill/circle shape */
 }

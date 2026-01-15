@@ -1,3 +1,7 @@
+window.onbeforeunload = function() {
+  window.scrollTo(0, 0);
+};
+
 // Register GSAP Plugins
 gsap.registerPlugin(ScrollTrigger);
 
